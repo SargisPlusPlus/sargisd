@@ -2,6 +2,13 @@
 <p>Find me in app/views/recipes/index.html.erb</p>
 
 Searching for: <%= @search %>
+
+<% if @recipes.nil? %>
+
+  <p>No recipes found </p>
+
+<% else %>
+
 <table border="1">
   <tr>
     <th>Image</th>
@@ -17,3 +24,4 @@ Searching for: <%= @search %>
   <% end %>
 </table>
 
+<% end %>
